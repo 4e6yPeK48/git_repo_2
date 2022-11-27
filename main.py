@@ -32,7 +32,7 @@ class MyWidget(QMainWindow, Ui_Dialog):
     def func(self, qp):
         ran = randint(1, 7)
         for i in range(ran):
-            qp.setBrush(QColor('yellow'))
+            qp.setBrush(QColor(randint(0, 255), randint(0, 255), randint(0, 255)))
             x = randint(0, 100)
             qp.drawEllipse(QPoint(randrange(0, 440), randrange(0, 331)), x, x)
 
