@@ -1,6 +1,5 @@
 import sys
 
-# я надеюсь теперь оно заработает
 from PyQt5.QtWidgets import QApplication, QMainWindow
 from PyQt5.QtGui import QPainter, QColor
 from PyQt5.QtCore import QPoint
