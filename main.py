@@ -3,7 +3,8 @@ import sys
 from PyQt5.QtWidgets import QApplication, QMainWindow
 from PyQt5.QtGui import QPainter, QColor
 from PyQt5.QtCore import QPoint
-from yellow import Ui_Dialog
+from PyQt5 import uic
+
 from random import randint, randrange
 
 
@@ -11,9 +12,10 @@ def except_hook(cls, exception, traceback):
     sys.__excepthook__(cls, exception, traceback)
 
 
-class MyWidget(QMainWindow, Ui_Dialog):
+class MyWidget(QMainWindow):
     def __init__(self):
         super().__init__()
+        uic.loadUi('yellow.ui', self)
         self.setupUi(self)
         self.do_paint = False
         self.pushButton.clicked.connect(self.paint)
